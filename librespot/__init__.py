@@ -1,8 +1,11 @@
 from __future__ import annotations
-from librespot.crypto import DiffieHellman
-from librespot.proto.Keyexchange_pb2 import BuildInfo, Platform, Product, ProductFlags
-from librespot.structure import Closeable, Runnable
+
 import platform
+
+from librespot.crypto import DiffieHellman
+from librespot.proto.Keyexchange_pb2 import (BuildInfo, Platform, Product,
+                                             ProductFlags)
+from librespot.structure import Closeable, Runnable
 
 
 class Version:
@@ -31,4 +34,4 @@ class Version:
         return BuildInfo(product=Product.PRODUCT_CLIENT,
                          product_flags=[ProductFlags.PRODUCT_FLAG_NONE],
                          platform=Version.platform(),
-                         version=117300517)
+                         version=125200442)
